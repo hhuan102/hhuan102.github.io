@@ -300,6 +300,7 @@ function draw(nations) {
         .data(interpolateData(2000))
         .enter().append("circle")
         .attr("class", "dot")
+        .attr("r", function(d) {return d.gdp;})
         .style("fill", function (d) {
         return color(d.region);
     })
